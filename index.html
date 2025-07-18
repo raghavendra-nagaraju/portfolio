@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raghavendra Nagaraju – Senior AEM & Full Stack Engineer</title>
+  <meta name="description" content="Senior Full Stack Engineer specializing in Adobe Experience Manager (AEM) and backend systems with a decade of experience." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raghavendra Nagaraju",
+    "jobTitle": "Senior Software Engineer (AEM & Backend)",
+    "url": "https://linkedin.com/in/raghavendra",
+    "email": "mailto:raghav@example.com",
+    "telephone": "+1-234-567-8901",
+    "knowsAbout": ["AEM","Java","JavaScript","Node.js","AWS","Kubernetes"],
+    "alumniOf": "Bachelor of Engineering in Computer Science"
+  }
+  </script>
+  <style>
+    :root {
+      --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --color-bg: #fff;
+      --color-text: #222;
+      --color-accent: #2a5885;
+      --color-muted: #666;
+      --color-highlight: #e6f0ff;
+      --color-card: #f9f9f9;
+      --shadow: 0 4px 10px rgba(0,0,0,0.06);
+    } 
+    [data-theme="dark"] {
+      --color-bg: #121212;
+      --color-text: #eee;
+      --color-accent: #4a8bd6;
+      --color-muted: #999;
+      --color-highlight: #1e2a38;
+      --color-card: #1a1a1a;
+      --shadow: 0 4px 10px rgba(0,0,0,0.4);
+    } 
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      margin: 0;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    } 
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid var(--color-muted);
+      background: var(--color-card);
+      box-shadow: var(--shadow);
+    } 
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 1.5rem auto;
+      padding: 1.5rem;
+      background: var(--color-card);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-accent);
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 0.3rem;
+      display: inline-block;
+    }
+    .toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.6rem 0.8rem;
+      cursor: pointer;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+    }
+    .toggle-theme:hover {
+      opacity: 0.9;
+    }
+
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .job-header h3 {
+      margin-bottom: 0;
+      margin-right: 0.5rem;
+    }
+    .company {
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+    .duration {
+      margin-left: auto;
+      color: var(--color-muted);
+      font-size: 0.95rem;
+    }
+    
+    .job h3 {
+      margin-bottom: 0;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-highlight);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    .skill-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    .contact-item i {
+      color: var(--color-accent);
+    }
+    
+    #back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      padding: 0.6rem 0.8rem;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      display: none;
+      transition: opacity 0.3s;
+    }
+    #back-to-top.show {
+      display: block;
+    }
+    #back-to-top:hover {
+      opacity: 0.9;
+    }
+    
+    .job {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--color-muted);
+    }
+    .job:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .job h3 {
+      margin-bottom: 0.3rem;
+    }
+    .job p {
+      margin-top: 0;
+      color: var(--color-muted);
+    }
+    .job ul {
+      margin-top: 0.8rem;
+      padding-left: 1.2rem;
+    }
+    .job li {
+      margin-bottom: 0.4rem;
+    }
+    
+    .certification {
+      margin-bottom: 1rem;
+    }
+    .certification a {
+      text-decoration: none;
+      color: var(--color-accent);
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+    .certification a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <button class="toggle-theme" aria-label="Toggle dark/light theme">
+    <i class="fas fa-moon"></i> Theme
+  </button>
+  <header>
+    <h1>Raghavendra Nagaraju</h1>
+    <p>Senior Software Engineer | AEM Architect</p>
+    <div class="contact-info">
+      <a href="mailto:raghavendra.nagaraju@outlook.com" class="contact-item">
+        <i class="fas fa-envelope"></i> raghavendra.nagaraju@outlook.com
+      </a>
+      <a href="https://www.linkedin.com/in/raghavendra-nagaraju/" target="_blank" class="contact-item">
+        <i class="fab fa-linkedin"></i> https://www.linkedin.com/in/raghavendra-nagaraju/
+      </a>
+    </div>
+  </header>
+
+  <section id="summary">
+    <h2>Professional Summary</h2>
+    <p>Dynamic full-stack developer with a decade of experience in leveraging Adobe Experience Manager and marketing automation to elevate client-customer interactions. Expertise encompasses AEM development, Java, and JavaScript, driving impactful e-commerce solutions and seamless user experiences. Proven ability to lead cross-functional teams and deliver innovative technologies while maintaining high standards of code quality. Committed to fostering talent through strategic upskilling initiatives, ensuring teams are equipped with the latest frameworks and methodologies. Passionate about optimizing digital experiences and enhancing operational efficiencies across diverse industries.</p>
+  </section>
+  
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Senior Product Software Engineer</h3>
+      <span class="company">Whitbread Group Plc</span>
+      <span class="duration"><em>July 2022 – Present</em></span>
+      <ul>
+        <li>Led migration from AEM 6.4 to AEM 6.5, managing a team of 5 engineers to deliver a seamless upgrade with zero downtime, enabling new feature adoption and enhanced system stability.</li>
+        <li>Delivered unified booking flow journeys by integrating AEM with multiple backend systems using content Services, improving omnichannel functionality and boosting user experience across web and mobile platforms.</li>
+        <li>Designed and implemented a custom admin module on AEM for Whitbread Hotels & Restaurants, streamlining configuration management and reducing manual effort by 80% during bulk content updates.</li>
+        <li>Re-architected AEM deployment on AWS, optimizing infrastructure and reducing hosting costs by £12K per year, while enhancing scalability and performance.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Senior Consultant</h3>
+      <span class="company">Kaiser Permanente via Deloitte India (Offices of the US)</span>
+      <span class="duration"><em>May 2021 - July 2022</em></span>
+      <ul>
+        <li>Built reusable AEM components and templates with primary focus on improving authoring experience, cutting content publishing time by 30% and improving consistency across marketing campaigns</li>
+        <li>Designed and developed a comprehensive approval process by customizing the "Request for Activation" workflow
+to meet compliance requirements</li>
+        <li>Led cross-functional collaboration across development, operations, and marketing teams, aligning technical execution with business goals and driving the successful delivery</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Senior Software Engineer, Adobe Marketing Cloud</h3>
+      <span class="company">ICF Next</span>
+      <span class="duration"><em>March 2016 - April 2021</em></span>
+      <ul>
+        <li>    Partnered with client IT teams to boost site performance by:
+          <ul>
+            <li>Introducing lazy loading for images, cutting initial load time by 20%.</li>
+            <li>Restructuring JavaScript files for better minification, reducing bundle size by 15%.</li>
+            <li>Improving caching efficiency, decreasing server load by 25%.</li>
+            <li>Developing a custom Sling Rewriter to defer JavaScript loading via clientlibs, improving page speed scores.</li>
+          </ul>
+        </li>
+        <li>Migrated 10,000+ videos from FlowPlayer to Dynamic Media Scene7, using Groovy scripts to automate workflow triggers and content updates, saving 150+ manual hours</li>
+        <li>Defined architectural standards to ensure scalable, maintainable solutions</li>
+        <li>Served on the governance team to streamline codebase and technical docs to reduce onboarding time for new developers</li>
+        <li>Delivered AEM solutions for Banking, Healthcare, Retail, and Hospitality clients, adapting best practices to domain-specific needs</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Freelance consultant</h3>
+      <span class="company">Go Hunt</span>
+      <span class="duration"><em>October 2021 - April 2022</em></span>
+      <ul>
+        <li>Improved code quality and maintainability by enforcing best coding practices and conducting regular code reviews, reducing defects and accelerating release cycles.</li>
+        <li>Conducted comprehensive architecture and implementation reviews of the AEM solution</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
+<defs>
+<radialGradient id="radial0" gradientUnits="userSpaceOnUse" cx="352" cy="352" fx="352" fy="352" r="512" gradientTransform="matrix(0.0390625,0,0,0.0390625,0,0)">
+<stop offset="0" style="stop-color:rgb(22.745098%,16.470588%,11.372549%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(14.117647%,7.843137%,1.960784%);stop-opacity:1;"/>
+</radialGradient>
+</defs>
+<g id="surface1">
+<rect x="0" y="0" width="40" height="40" style="fill:url(#radial0);stroke:none;"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,46.27451%,9.411765%);fill-opacity:1;" d="M 2.773438 20 C 2.773438 29.515625 10.484375 37.226562 20 37.226562 C 29.515625 37.226562 37.226562 29.515625 37.226562 20 C 37.226562 10.484375 29.515625 2.773438 20 2.773438 C 10.484375 2.773438 2.773438 10.484375 2.773438 20 Z M 4.53125 19.980469 C 4.542969 11.4375 11.476562 4.519531 20.019531 4.53125 C 28.5625 4.542969 35.480469 11.476562 35.46875 20.019531 C 35.457031 28.5625 28.535156 35.46875 20 35.46875 C 11.464844 35.46875 4.527344 28.53125 4.53125 19.984375 Z M 4.53125 19.980469 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,87.843138%,79.607844%);fill-opacity:1;" d="M 30.742188 20 C 30.742188 18.558594 29.917969 17.242188 28.621094 16.613281 C 29.246094 15.117188 28.90625 13.386719 27.761719 12.238281 C 26.613281 11.09375 24.882812 10.753906 23.386719 11.378906 C 22.757812 10.082031 21.441406 9.257812 20 9.257812 C 18.558594 9.257812 17.242188 10.082031 16.613281 11.378906 C 15.117188 10.753906 13.386719 11.09375 12.238281 12.238281 C 11.09375 13.386719 10.753906 15.117188 11.378906 16.613281 C 10.082031 17.242188 9.257812 18.558594 9.257812 20 C 9.257812 21.441406 10.082031 22.757812 11.378906 23.386719 C 10.753906 24.882812 11.09375 26.613281 12.238281 27.761719 C 13.386719 28.90625 15.117188 29.246094 16.613281 28.621094 C 17.242188 29.917969 18.558594 30.742188 20 30.742188 C 21.441406 30.742188 22.757812 29.917969 23.386719 28.621094 C 24.882812 29.246094 26.613281 28.90625 27.761719 27.761719 C 28.90625 26.613281 29.246094 24.882812 28.621094 23.386719 C 29.917969 22.757812 30.742188 21.441406 30.742188 20 Z M 27.042969 12.957031 C 27.917969 13.835938 28.160156 15.164062 27.648438 16.296875 C 27.425781 16.257812 27.203125 16.234375 26.976562 16.234375 C 25.203125 16.230469 23.769531 14.796875 23.765625 13.023438 C 23.765625 12.796875 23.742188 12.574219 23.703125 12.351562 C 24.835938 11.839844 26.164062 12.082031 27.042969 12.957031 Z M 23.191406 27.351562 C 23.0625 27.257812 22.941406 27.152344 22.828125 27.042969 C 21.265625 25.480469 18.734375 25.480469 17.171875 27.042969 C 17.058594 27.152344 16.9375 27.257812 16.808594 27.351562 C 16.792969 27.226562 16.785156 27.101562 16.785156 26.976562 C 16.78125 24.898438 15.101562 23.21875 13.023438 23.214844 C 12.898438 23.214844 12.773438 23.207031 12.648438 23.191406 C 12.742188 23.0625 12.847656 22.941406 12.957031 22.828125 C 14.519531 21.265625 14.519531 18.734375 12.957031 17.171875 C 12.847656 17.058594 12.742188 16.9375 12.648438 16.808594 C 12.773438 16.792969 12.898438 16.785156 13.023438 16.785156 C 15.101562 16.78125 16.78125 15.101562 16.785156 13.023438 C 16.785156 12.898438 16.792969 12.773438 16.808594 12.648438 C 16.9375 12.742188 17.058594 12.847656 17.171875 12.957031 C 18.734375 14.519531 21.265625 14.519531 22.828125 12.957031 C 22.941406 12.847656 23.0625 12.742188 23.191406 12.648438 C 23.207031 12.773438 23.214844 12.898438 23.214844 13.023438 C 23.21875 15.101562 24.898438 16.78125 26.976562 16.785156 C 27.101562 16.785156 27.226562 16.792969 27.351562 16.808594 C 27.257812 16.9375 27.152344 17.058594 27.042969 17.171875 C 25.480469 18.734375 25.480469 21.265625 27.042969 22.828125 C 27.152344 22.941406 27.257812 23.0625 27.351562 23.191406 C 27.226562 23.207031 27.101562 23.214844 26.976562 23.214844 C 24.898438 23.21875 23.21875 24.898438 23.214844 26.976562 C 23.214844 27.101562 23.207031 27.226562 23.191406 27.351562 Z M 20 9.808594 C 21.234375 9.808594 22.359375 10.515625 22.894531 11.625 C 22.605469 11.796875 22.34375 12.003906 22.105469 12.238281 C 20.941406 13.398438 19.058594 13.398438 17.894531 12.238281 C 17.65625 12.003906 17.394531 11.796875 17.105469 11.625 C 17.640625 10.515625 18.765625 9.808594 20 9.808594 Z M 12.957031 12.957031 C 13.835938 12.082031 15.164062 11.839844 16.296875 12.351562 C 16.257812 12.574219 16.234375 12.796875 16.234375 13.023438 C 16.230469 14.796875 14.796875 16.230469 13.023438 16.234375 C 12.796875 16.234375 12.574219 16.257812 12.351562 16.296875 C 11.839844 15.164062 12.082031 13.835938 12.957031 12.957031 Z M 9.808594 20 C 9.808594 18.765625 10.515625 17.640625 11.625 17.105469 C 11.796875 17.394531 12.003906 17.65625 12.238281 17.894531 C 13.398438 19.058594 13.398438 20.941406 12.238281 22.105469 C 12.003906 22.34375 11.796875 22.605469 11.625 22.894531 C 10.515625 22.359375 9.808594 21.234375 9.808594 20 Z M 12.957031 27.042969 C 12.082031 26.164062 11.839844 24.835938 12.351562 23.703125 C 12.574219 23.742188 12.796875 23.765625 13.023438 23.765625 C 14.796875 23.769531 16.230469 25.203125 16.234375 26.976562 C 16.234375 27.203125 16.257812 27.425781 16.296875 27.648438 C 15.164062 28.160156 13.835938 27.917969 12.957031 27.042969 Z M 20 30.191406 C 18.765625 30.191406 17.640625 29.484375 17.105469 28.375 C 17.394531 28.203125 17.65625 27.996094 17.894531 27.761719 C 19.058594 26.601562 20.941406 26.601562 22.105469 27.761719 C 22.34375 27.996094 22.605469 28.203125 22.894531 28.375 C 22.359375 29.484375 21.234375 30.191406 20 30.191406 Z M 27.042969 27.042969 C 26.164062 27.917969 24.835938 28.160156 23.703125 27.648438 C 23.742188 27.425781 23.765625 27.203125 23.765625 26.976562 C 23.769531 25.203125 25.203125 23.769531 26.976562 23.765625 C 27.203125 23.765625 27.425781 23.742188 27.648438 23.703125 C 28.160156 24.835938 27.917969 26.164062 27.042969 27.042969 Z M 28.375 22.894531 C 28.203125 22.605469 27.996094 22.34375 27.761719 22.105469 C 26.601562 20.941406 26.601562 19.058594 27.761719 17.894531 C 27.996094 17.65625 28.203125 17.394531 28.375 17.105469 C 29.484375 17.640625 30.191406 18.765625 30.191406 20 C 30.191406 21.234375 29.484375 22.359375 28.375 22.894531 Z M 28.375 22.894531 "/>
+</g>
+</svg>
+        <span>Adobe Experience Manager</span>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-java skill-icon" style="color: #007396;"></i>
+        <span>Java/J2EE</span>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-server skill-icon" style="color: var(--color-accent);"></i>
+        <span>Spring Boot</span>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-aws skill-icon" style="color: #FF9900;"></i>
+        <span>AWS</span>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-database skill-icon" style="color: #00758F;"></i>
+        <span>SQL/NoSQL</span>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-jira skill-icon" style="color: #2496ED;"></i>
+        <span>Jira</span>
+      </div>
+      <div class="skill-card">
+        <svg class="skill-icon" viewBox="-11.5 -10.23174 23 20.46348" width="40" height="40">
+        <circle cx="0" cy="0" r="2.05" fill="#61dafb"></circle>
+        <g stroke="#61dafb" stroke-width="1" fill="none">
+          <ellipse rx="11" ry="4.2"></ellipse>
+          <ellipse rx="11" ry="4.2" transform="rotate(60)"></ellipse>
+          <ellipse rx="11" ry="4.2" transform="rotate(120)"></ellipse>
+        </g>
+        </svg>
+        <span>React</span>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-node-js skill-icon" style="color: #68A063;"></i>
+        <span>Node.js</span>
+      </div>
+    </div>
+  </section>
+  
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certification">
+      <strong>Adobe Certified Master - Adobe Experience Manager Sites Architect</strong>
+      <a href="https://www.credly.com/badges/cbefcb21-b87a-4b4b-b151-1a1e44b5cb5e" target="_blank">View Credential</a>
+    </div>
+    <div class="certification">
+      <strong>Adobe Certified Expert - Adobe Experience Manager Sites Business Practitioner</strong>
+      <a href="https://www.credly.com/badges/73964dd3-db0a-46ea-9e72-78bd540e6b4c" target="_blank">View Credential</a>
+    </div>
+  </section>
+  
+  <section id="education">
+    <h2>Education</h2>
+    <p>Bachelor of Engineering, Visvesvaraya Technological University, 2011 - 2015</p>
+  </section>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    document.querySelector('.toggle-theme').addEventListener('click', () => {
+      const isDark = document.documentElement.dataset.theme === 'dark';
+      document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+      const icon = document.querySelector('.toggle-theme i');
+      icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+      document.querySelector('.toggle-theme').innerHTML = `${icon.outerHTML} Theme`;
+    });
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
