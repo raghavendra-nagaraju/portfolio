@@ -42,7 +42,6 @@
     overflow-x: hidden;
   }
 
-  /* Layout */
   .container {
     width: 100%;
     max-width: 1200px;
@@ -58,7 +57,6 @@
     justify-content: center;
   }
 
-  /* Typography */
   h1, h2, h3 {
     font-weight: 600;
     color: var(--light);
@@ -89,7 +87,6 @@
     color: var(--primary);
   }
 
-  /* Background Elements */
   .bg-elements {
     position: fixed;
     top: 0;
@@ -107,7 +104,6 @@
     filter: blur(60px);
   }
 
-  /* Hero Section */
   .hero {
     position: relative;
     padding: 120px 0 100px;
@@ -184,7 +180,6 @@
     background-color: rgba(77, 142, 255, 0.1);
   }
 
-  /* Experience Section */
   .experience {
     padding: 100px 0;
   }
@@ -277,7 +272,6 @@
     color: var(--primary);
   }
 
-  /* Skills Section */
   .skills {
     padding: 100px 0;
     background-color: rgba(10, 25, 47, 0.9);
@@ -330,7 +324,6 @@
     opacity: 0.8;
   }
 
-  /* Certifications Section */
   .certifications {
     padding: 100px 0;
     background-color: var(--dark);
@@ -392,7 +385,6 @@
     text-decoration: underline;
   }
 
-  /* Contact Section */
   .contact {
     padding: 100px 0;
     text-align: center;
@@ -449,7 +441,6 @@
     text-decoration: underline;
   }
 
-  /* Animations */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
@@ -459,8 +450,6 @@
     animation: float 6s ease-in-out infinite;
   }
 
-  /* ===== Responsive Breakpoints ===== */
-  /* Tablet (1024px and below) */
   @media (max-width: 1024px) {
     .container {
       padding: 0 40px;
@@ -471,7 +460,6 @@
     }
   }
 
-  /* Small Tablet (768px and below) */
   @media (max-width: 768px) {
     .container {
       padding: 0 30px;
@@ -502,7 +490,6 @@
     }
   }
 
-  /* Mobile (480px and below) */
   @media (max-width: 480px) {
     .container {
       padding: 0 20px;
@@ -524,22 +511,18 @@
 </style>
   </head>
   <body>
-    <!-- Background elements -->
     <div class="bg-elements">
       <div class="bg-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
       <div class="bg-element" style="width: 400px; height: 400px; bottom: 10%; right: 5%;"></div>
     </div>
-    <!-- Hero Section -->
-    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
           <div class="hero-message">
-            A Decade at the Intersection of Technology & Human-centred Design
+            A Decade of Crafting technology with People in Mind
           </div>
           <p class="hero-subtitle">Hi, I'm</p>
           <h1 class="hero-title">Raghavendra</h1>
-          <!-- Clean multi-line description solution -->
           <div class="hero-desc-wrapper">
             <p class="hero-desc">
               For the past 10 years, I’ve been working at the intersection of technology and user experience, helping brands create digital journeys that feel effortless yet impactful. My path started with a curiosity for AEM development, which soon expanded into full-stack expertise with Java and JavaScript. Since then, I’ve built e-commerce platforms, optimised customer interactions through marketing automation, and led teams to deliver solutions that not only meet business goals but also delight end users.
@@ -556,12 +539,10 @@
         </div>
       </div>
     </section>
-    <!-- Experience Section -->
     <section id="experience" class="experience">
       <div class="container">
         <h2 class="section-title">The Journey So Far</h2>
         <div class="timeline">
-          <!-- Whitbread -->
           <div class="timeline-item">
             <div class="timeline-header">
               <h3 class="company">Whitbread Plc</h3>
@@ -578,7 +559,6 @@
               </ul>
             </div>
           </div>
-          <!-- Deloitte -->
           <div class="timeline-item">
             <div class="timeline-header">
               <h3 class="company">Kaiser Permanente via Deloitte India (Offices of the US)</h3>
@@ -596,7 +576,6 @@
               </ul>
             </div>
           </div>
-          <!-- ICF Next -->
           <div class="timeline-item">
             <div class="timeline-header">
               <h3 class="company">ICF Next</h3>
@@ -619,7 +598,6 @@
               </ul>
             </div>
           </div>
-          <!-- Go Hunt -->
           <div class="timeline-item">
             <div class="timeline-header">
               <h3 class="company">Go Hunt</h3>
@@ -641,7 +619,6 @@
       <div class="container">
         <h2 class="section-title">Technical Toolkit</h2>
         <div class="skills-grid">
-          <!-- AEM -->
           <div class="skill-card">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
@@ -661,31 +638,26 @@
             <span>Adobe Experience Manager</span>
             <div class="skill-meta">10+ implementations</div>
           </div>
-          <!-- Java -->
           <div class="skill-card">
             <i class="fab fa-java skill-icon" style="color: #007396;"></i>
             <span>Java/J2EE</span>
             <div class="skill-meta">Enterprise systems</div>
           </div>
-          <!-- JavaScript -->
           <div class="skill-card">
             <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
             <span>JavaScript</span>
             <div class="skill-meta">ES6+, React, Node, JQuery</div>
           </div>
-          <!-- Spring Boot -->
           <div class="skill-card">
             <i class="fas fa-server skill-icon" style="color: #6DB33F;"></i>
             <span>Spring Boot</span>
             <div class="skill-meta">Microservices</div>
           </div>
-          <!-- AWS -->
           <div class="skill-card">
             <i class="fab fa-aws skill-icon" style="color: #FF9900;"></i>
             <span>AWS</span>
             <div class="skill-meta">AEM deployment automation</div>
           </div>
-          <!-- Databases -->
           <div class="skill-card">
             <i class="fas fa-database skill-icon" style="color: #00758F;"></i>
             <span>SQL/NoSQL</span>
@@ -694,12 +666,10 @@
         </div>
       </div>
     </section>
-    <!-- Certifications Section -->
     <section id="certifications" class="certifications">
       <div class="container">
         <h2 class="section-title">Certifications</h2>
         <div class="certifications-grid">
-          <!-- AEM Architect -->
           <div class="certification-card">
             <div class="certification-header">
               <i class="fas fa-award certification-icon"></i>
@@ -712,7 +682,6 @@
             <i class="fas fa-external-link-alt"></i> Verify Credential
             </a>
           </div>
-          <!-- AEM Business Practitioner -->
           <div class="certification-card">
             <div class="certification-header">
               <i class="fas fa-award certification-icon"></i>
@@ -745,7 +714,6 @@
                 <a href="mailto:raghavendra.nagaraju@outlook.com" class="contact-link">raghavendra.nagaraju@outlook.com</a>
               </div>
             </div>
-            <!-- LinkedIn -->
             <div class="contact-card">
               <div class="contact-icon">
                 <i class="fab fa-linkedin-in"></i>
@@ -761,7 +729,6 @@
       </div>
     </section>
     <script>
-      // Create floating background elements
       function createBgElements() {
           const bgElements = document.querySelector('.bg-elements');
           const colors = ['rgba(77, 142, 255, 0.1)', 'rgba(77, 142, 255, 0.08)', 'rgba(77, 142, 255, 0.05)'];
@@ -800,7 +767,6 @@
           });
       });
       
-      // Scroll animation
       function handleScroll() {
           const sections = document.querySelectorAll('section');
                       
@@ -814,11 +780,10 @@
           });
       }
       
-      // Initialise
       document.addEventListener('DOMContentLoaded', () => {
           createBgElements();
           window.addEventListener('scroll', handleScroll);
-          handleScroll(); // Run once on load
+          handleScroll();
       });
     </script>
   </body>
